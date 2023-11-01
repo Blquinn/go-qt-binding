@@ -12,12 +12,10 @@ extern "C" {
 	{
 		void* app_thread;
 		void* qt_application;
-		// void* return_lock; // ReturnLock
 	} AppStruct;
 
 	AppStruct* Application_new(int argc, char** argv);
 	void Application_exec(void* app_ptr);
-	// int Application_await_exit(AppStruct* app);
 	/* End Application */
 
 	/* Window */
@@ -35,9 +33,6 @@ extern "C" {
 	void* WebEngineView_new(void* win_ptr, void* win_layout_ptr);
 	void WebEngineView_load_url(void* web_engine_ptr, char* url);
 	/* End WebEngineView */
-
-
-	// int run_app(int argc, char **argv);
 
 #ifdef __cplusplus
 }

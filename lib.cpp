@@ -56,8 +56,6 @@ AppStruct *Application_new(int argc, char **argv) {
 void *Window_new(void *app_ptr) {
   auto app = static_cast<QApplication *>(app_ptr);
 
-  // qInfo() << "qt here2";
-
   QWidget *win;
   runOnAppThread(
       app,
